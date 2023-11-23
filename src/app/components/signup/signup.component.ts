@@ -41,7 +41,7 @@ registerForm: FormGroup;
         alert('Register successful');
         console.log(user);
 
-        // Redirect to login page
+        
         this.router.navigate(['/login']);
       },
       error: (error) => {

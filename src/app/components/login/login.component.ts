@@ -34,24 +34,24 @@ export class LoginComponent implements OnInit{
   }
 
   login() {
-    // Attempt to login
+   
     this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
       next: (response) => {
         console.log('Login successful');
 
-        // Store user in local storage to keep user logged in between page refreshes
+        
         localStorage.removeItem('authToken');
         localStorage.setItem('authToken', response.authToken);
 
-        // Load user data
+        
         this.authService.authenticate().subscribe({
           next: (userData: User) => {
-            // Store user data in local storage
+           
             
             localStorage.setItem('currentUser', JSON.stringify(userData));
             this.authService.currentUserSubject.next(userData);
 
-            // Redirect to home page
+            
             this.router.navigate(['/']);
 
           },

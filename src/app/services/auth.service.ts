@@ -9,7 +9,7 @@ import { User } from '../Modele/User.model';
 export class AuthService {
 
   
-  public currentUserSubject = new BehaviorSubject<any>(null); // initializing with no user object since logged out
+  public currentUserSubject = new BehaviorSubject<any>(null); 
 
   readonly API_URL = 'http://localhost:8080';
 
@@ -53,7 +53,7 @@ export class AuthService {
       password,
       []
     );
-    // Register a new user
+    
     return this.http.post<User>(`${this.API_URL}/auth/signup`, user);
 
   }
@@ -64,7 +64,7 @@ export class AuthService {
       email,
       password
     };
-    // Check credentials in the server
+   
     return this.http.post<any>(`${this.API_URL}/auth/login`, body);
   }
 

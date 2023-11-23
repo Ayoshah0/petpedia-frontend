@@ -47,37 +47,23 @@ export class PetComponent {
     this.loadFishes(); 
   }
 
-  // onSubmit() {
-  //   if (this.registerForm.valid) {
-  //     const petData = this.registerForm.value;
-
-  //     this.http.post('http://localhost:8080/pets/add', petData).subscribe(
-  //       (response) => {
-  //         console.log('Pet added successfully:', response);
-         
-  //       },
-  //       (error) => {
-  //         console.error('Error adding pet:', error);
-          
-  //       }
-  //     );
-  //   }
-  // }
+  
+  
 
   onSubmit() {
     if (this.registerForm.valid) {
       if (this.editingPet) {
-        // If editingPet is not null, it means we are updating an existing pet
+        
         this.onUpdate(this.editingPet);
       } else {
-        // Otherwise, we are adding a new pet
+        
         const petData = this.registerForm.value;
   
         this.http.post('http://localhost:8080/pets/add', petData).subscribe(
           (response) => {
             console.log('Pet added successfully:', response);
-            this.loadFishes(); // Refresh the list of fishes after adding
-            this.resetForm(); // Reset the form values
+            this.loadFishes(); 
+            this.resetForm(); 
           },
           (error) => {
             console.error('Error adding pet:', error);
@@ -88,8 +74,8 @@ export class PetComponent {
   }
 
   editPet(pet: Pet) {
-    this.editingPet = pet; // Set the editingPet property to the selected pet
-    this.registerForm.patchValue(pet); // Populate the form fields with the pet's values
+    this.editingPet = pet; 
+    this.registerForm.patchValue(pet); 
   }
 
   resetForm() {
@@ -112,8 +98,8 @@ search() {
       this.petsServie.updatePet(pet.name, petData).subscribe(
         (response) => {
           console.log('Pet updated successfully:', response);
-          this.loadFishes(); // Refresh the list of fishes after updating
-          this.resetForm(); // Reset the form values
+          this.loadFishes(); 
+          this.resetForm(); 
         },
         (error) => {
           console.error('Error updating pet:', error);
@@ -130,7 +116,7 @@ search() {
     this.petsServie.deletePet(name).subscribe(
       (response) => {
         console.log('Pet deleted successfully:', response);
-        // After deleting the pet, you might want to refresh the list of Fishes
+       
         this.loadFishes();
       },
       (error) => {

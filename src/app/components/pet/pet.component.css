@@ -1,7 +1,4 @@
-/* .container {
-    max-width: 400px;
-    margin: auto;
-  } */
+
   
   form {
     display: flex;
@@ -21,7 +18,7 @@
     margin-top: 5px;
   }
 
-  /* pet.component.css */
+ 
 
 .container {
   max-width: 600px;
@@ -63,7 +60,7 @@ label {
 
 
 /* here */
-/* Add these styles to your global styles.css or component-specific styles file */
+
 
 .search-container {
   display: flex;
@@ -73,26 +70,26 @@ label {
 
 .mat-form-field {
   margin-right: 10px;
-  width: 300px; /* Adjust the width as needed */
+  width: 300px; 
 }
 
 .mat-input-element {
-  color: #333; /* Text color */
+  color: #333; 
 }
 
 .mat-form-field-underline {
-  color: #2196F3; /* Change the underline color */
+  color: #2196F3; 
 }
 
 .mat-form-field-label {
-  color: #2196F3; /* Change the label color */
+  color: #2196F3; 
 }
 
 .mat-form-field-ripple {
-  color: #2196F3; /* Change the ripple color */
+  color: #2196F3; 
 }
 
-/* Button styles */
+
 button {
   cursor: pointer;
   font-size: 16px;
@@ -103,11 +100,11 @@ button {
 }
 
 button:hover {
-  background-color: #1565C0; /* Change the hover background color */
-  color: #fff; /* Change the hover text color */
+  background-color: #1565C0; 
+  color: #fff; 
 }
 
-/* Primary button styles */
+
 button.primary {
   background-color: #2196F3;
   color: #fff;
@@ -117,7 +114,7 @@ button.primary:hover {
   background-color: #1565C0;
 }
 
-/* Warn button styles (for delete button, for example) */
+
 button.warn {
   background-color: #FF5252;
   color: #fff;
