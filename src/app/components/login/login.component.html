@@ -1,0 +1,29 @@
+<div class="login">
+
+  <div class="sin">
+    <div class="cat">
+   <img src="../../../assets/finimg.jpg" width="300px" height="250px">
+    </div>
+
+    <h1>Login</h1>
+   
+    <form (ngSubmit)="login()" [formGroup]="loginForm">
+    <div>
+      <label>Email:</label>
+      <input type="email" placeholder="Email..." formControlName="email" />
+    </div>
+
+    <div>
+      <label>Password:</label>
+      <input type="password" placeholder="Password..."formControlName="password"/>
+    </div>
+<br>
+    <div>
+      <button type="submit" [disabled]="loginForm.invalid">Sign Up</button>
+    </div>
+    </form>
+   
+    <p>
+      Don't have an account? <a [routerLink]="['/signup']">Create new account</a>
+    </p>
+  </div>

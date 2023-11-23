@@ -1,0 +1,61 @@
+/* .container {
+    max-width: 400px;
+    margin: auto;
+  } */
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .input-error {
+    color: #dc3545;
+    margin-top: 5px;
+  }
+
+  /* pet.component.css */
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 150px;
+}
+
+form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(106, 105, 105, 0.1);
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #9d9e9f;
+  border-color: #959faa;
+}
+
+.btn-primary:hover {
+  background-color: #eff1f4;
+  border-color: #8e9195;
+}
+

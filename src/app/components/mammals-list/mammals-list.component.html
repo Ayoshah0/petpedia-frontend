@@ -1,0 +1,36 @@
+
+<h2>Mammals</h2>
+
+<div *ngFor="let mammals of Fishes" class="fi">
+  <div id="on"><img [src]="mammals.img_url" alt="{{ mammals.name }} Image" style="width: 300px;  border-left-width: 50px; "> </div>
+
+  <div class="fish-card">
+    <h3>{{ mammals.name }}</h3>
+    <br>
+    <p>Type: {{ mammals.petType }}</p>
+    <br>
+    <label><h3>Fact:</h3></label>
+    <p *ngFor="let sentence of mammals.fact.split('.'); let i = index">
+      {{ sentence }}{{ i < mammals.fact.split('.').length - 1 ? '.' : '' }}
+    
+  <br>
+  <div class="form-group">
+ 
+    <textarea
+      class="form-control"
+      id="comment"
+      [(ngModel)]="newCommentText"
+      placeholder="Type your comment here..."
+    ></textarea>
+  </div>
+ <br>
+    <div class="hear-btn">
+      <input class="checkbox" type="checkbox"/>
+      <button class="styl-btn"><span>Like</span></button>
+    </div>
+  <br>
+ 
+<br>
+  </div>
+</div>
+

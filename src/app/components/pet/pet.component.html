@@ -1,0 +1,93 @@
+<br>
+<input type="text" [(ngModel)]="searchName" placeholder="Search by name"  class="searchs " />
+<button (click)="search()">Search</button>
+
+<div *ngFor="let fish of filteredFishes" class="fish-card">
+  <div class="fish-info">
+    <img [src]="fish.img_url" alt="{{ fish.name }} Image" style="width: 300px;">
+    <h3>{{ fish.name }}</h3>
+    <p>Type: {{ fish.petType }}</p>
+    <label><h3>Fact:</h3></label>
+    <p>{{ fish.fact }}</p>
+  </div>
+  <div class="fish-actions">
+    <button (click)="editPet(fish)">Edit</button>
+    <button (click)="onDelete(fish.name)">Delete</button>
+  </div>
+</div>
+
+<button (click)="resetForm()">Reset</button>
+ 
+
+
+<div class="container mt-4">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter the pet name">
+        <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="text-danger">
+          Name is required
+        </div>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="petType">Pet Type:</label>
+        <input type="text" class="form-control" id="petType" formControlName="petType" placeholder="Enter the pet type">
+        <div *ngIf="petType.invalid && (petType.dirty || petType.touched)" class="text-danger">
+          Pet Type is required.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="fact">Fact:  </label>
+        <input type="text" class="form-control" id="fact" formControlName="fact" placeholder="Enter fact about your pet">
+        <div *ngIf="fact.invalid && (fact.dirty || fact.touched)" class="text-danger">
+          Fact is required.
+        </div>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="img_url">Img URL:</label>
+        <input type="text" class="form-control" id="img_url" formControlName="img_url" placeholder="Enter img for your pet">
+        <div *ngIf="img_url.invalid && (img_url.dirty || img_url.touched)" class="text-danger">
+          Img URL is required.
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Add Pet</button>
+    
+    <!-- <button (click)="onUpdate()">Update Pet</button> -->
+ </form>
+   
+ 
+
+ <div *ngFor="let fish of Fishes" class="fish-card">
+   <div class="fish-info">
+     <img [src]="fish.img_url" alt="{{ fish.name }} Image" style="width: 300px;">
+     <h3>{{ fish.name }}</h3>
+     <p>Type: {{ fish.petType }}</p>
+     <label><h3>Fact:</h3></label>
+     <p>{{ fish.fact }}</p>
+   </div>
+   <div class="fish-actions">
+     <button (click)="editPet(fish)">Edit</button>
+     <button (click)="onDelete(fish.name)">Delete</button>
+   </div>
+ </div>
+ 
+ <button (click)="resetForm()">Reset</button>
+
+ <!-- //////////////seeearch////// -->
+
+ 
+
+
+     
+     
+      
+      
+   

@@ -1,0 +1,52 @@
+
+<body class="fish-body">
+
+<section>
+
+
+<h2>Fish </h2>
+
+<div *ngFor="let fish of Fishes" class="fish">
+
+  <div id="on"><img [src]="fish.img_url" alt="{{ fish.name }} Image" style="width: 300px;  border-left-width: 50px; "> </div>
+
+
+<br>
+  <div class="fish-card">
+    <h3>{{ fish.name }}</h3>
+    <br>
+    <p>Type: {{ fish.petType }}</p>
+     <br>
+
+    <ng-container *ngIf="fish.fact">
+      <label><h3>Fact:</h3></label>
+      <p *ngFor="let sentence of fish.fact.split('.'); let i = index">
+      {{ sentence }}{{ i < fish.fact.split('.').length - 1 ? '.' : '' }}
+      </p>
+    </ng-container>
+
+<br>
+
+<div class="form-group">
+ 
+  <textarea
+    class="form-control"
+    id="comment"
+    [(ngModel)]="newCommentText"
+    placeholder="Type your comment here..."
+  ></textarea>
+</div>
+ <br>
+  
+  <div class="heart-btn">
+    <input class="checkbox" type="checkbox"/>
+    <button class="style-btn"><span>Like</span></button>
+  </div>
+<br>
+ 
+
+</div>
+<br>
+</div>
+</section>
+</body>
