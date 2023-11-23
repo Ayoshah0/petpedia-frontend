@@ -1,6 +1,13 @@
 <br>
-<input type="text" [(ngModel)]="searchName" placeholder="Search by name"  class="searchs " />
-<button (click)="search()">Search</button>
+<!-- <input type="text" [(ngModel)]="searchName" placeholder="Search by name"  class="searchs " />
+<button (click)="search()">Search</button> -->
+
+<mat-form-field class="searchs">
+  <input matInput type="text" [(ngModel)]="searchName" placeholder="Search by name">
+</mat-form-field>
+<button mat-raised-button class="primary" (click)="search()">Search</button>
+
+
 
 <div *ngFor="let fish of filteredFishes" class="fish-card">
   <div class="fish-info">
@@ -11,8 +18,10 @@
     <p>{{ fish.fact }}</p>
   </div>
   <div class="fish-actions">
-    <button (click)="editPet(fish)">Edit</button>
-    <button (click)="onDelete(fish.name)">Delete</button>
+    <!-- <button (click)="editPet(fish)">Edit</button> -->
+    <!-- <button (click)="onDelete(fish.name)">Delete</button> -->
+    <button mat-raised-button color="primary" (click)="editPet(fish)">Edit</button>
+    <button mat-raised-button color="warn" (click)="onDelete(fish.name)">Delete</button>
   </div>
 </div>
 
@@ -60,7 +69,7 @@
 
     <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Add Pet</button>
     
-    <!-- <button (click)="onUpdate()">Update Pet</button> -->
+  
  </form>
    
  
@@ -72,16 +81,19 @@
      <p>Type: {{ fish.petType }}</p>
      <label><h3>Fact:</h3></label>
      <p>{{ fish.fact }}</p>
+     <br>
    </div>
    <div class="fish-actions">
      <button (click)="editPet(fish)">Edit</button>
      <button (click)="onDelete(fish.name)">Delete</button>
    </div>
+   <br>
  </div>
  
- <button (click)="resetForm()">Reset</button>
+ 
+ <!-- <button (click)="resetForm()">Reset</button> -->
 
- <!-- //////////////seeearch////// -->
+ 
 
  
 
@@ -91,3 +103,81 @@
       
       
    
+
+
+
+
+
+
+    <!-- Add this to the head of your HTML or in your component's styles.scss file -->
+<!-- <style>
+  
+  .fish-card {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fish-info {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .fish-actions button {
+    margin-right: 10px;
+  }
+
+  .search-container {
+    margin-bottom: 20px;
+  } 
+
+ 
+  
+</style> -->
+
+<!-- Your HTML with Angular Material components -->
+<!-- <div class="search-container">
+  <mat-form-field class="searchs">
+    <input matInput type="text" [(ngModel)]="searchName" placeholder="Search by name">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="search()">Search</button>
+</div> -->
+
+<!-- <div *ngFor="let fish of filteredFishes" class="fish-card">
+  <div class="fish-info">
+    <img [src]="fish.img_url" alt="{{ fish.name }} Image" style="width: 300px;">
+    <h3>{{ fish.name }}</h3>
+    <p>Type: {{ fish.petType }}</p>
+    <label><h3>Fact:</h3></label>
+    <p>{{ fish.fact }}</p>
+  </div>
+  <div class="fish-actions">
+    <button mat-raised-button color="primary" (click)="editPet(fish)">Edit</button>
+    <button mat-raised-button color="warn" (click)="onDelete(fish.name)">Delete</button>
+  </div>
+</div> -->
+
+<!-- Your form with Angular Material components -->
+<!-- <div class="container mt-4">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"> -->
+    <!-- Add Angular Material form controls as needed -->
+    <!-- For example: -->
+    <!-- <mat-form-field class="form-group col-md-6">
+      <input matInput formControlName="name" placeholder="Enter the pet name">
+      <mat-error *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)">Name is required</mat-error>
+    </mat-form-field> -->
+
+    <!-- Add more Angular Material form controls as needed -->
+<!-- 
+    <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">Add Pet</button>
+  </form>
+</div> -->
+
+<!-- <div *ngFor="let fish of Fishes" class="fish-card"> -->
+  <!-- Display your fish cards with Angular Material styling as needed -->
+<!-- </div>
+
+<button mat-raised-button color="primary" (click)="resetForm()">Reset</button> -->

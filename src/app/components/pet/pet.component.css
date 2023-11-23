@@ -59,3 +59,72 @@ label {
   border-color: #8e9195;
 }
 
+
+
+
+/* here */
+/* Add these styles to your global styles.css or component-specific styles file */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mat-form-field {
+  margin-right: 10px;
+  width: 300px; /* Adjust the width as needed */
+}
+
+.mat-input-element {
+  color: #333; /* Text color */
+}
+
+.mat-form-field-underline {
+  color: #2196F3; /* Change the underline color */
+}
+
+.mat-form-field-label {
+  color: #2196F3; /* Change the label color */
+}
+
+.mat-form-field-ripple {
+  color: #2196F3; /* Change the ripple color */
+}
+
+/* Button styles */
+button {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1565C0; /* Change the hover background color */
+  color: #fff; /* Change the hover text color */
+}
+
+/* Primary button styles */
+button.primary {
+  background-color: #2196F3;
+  color: #fff;
+}
+
+button.primary:hover {
+  background-color: #1565C0;
+}
+
+/* Warn button styles (for delete button, for example) */
+button.warn {
+  background-color: #FF5252;
+  color: #fff;
+}
+
+button.warn:hover {
+  background-color: #D32F2F;
+}
+
+

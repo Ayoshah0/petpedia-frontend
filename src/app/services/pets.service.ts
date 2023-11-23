@@ -29,9 +29,9 @@ export class PetsService {
     return this.http.delete<string>(url);
   }
 
-  updatePet(name: string, pet: Pet): Observable<string> {
-    const url = `${this.API_URL}/Pets/Update/${name}`;
-    return this.http.put<string>(url, pet);
-  }
+ updatePet(name: string, pet: Pet): Observable<string> {
+  const url = `${this.API_URL}/Pets/Update/${name}`;
+  return this.http.put<string>(url, pet);
+}
 
 }
