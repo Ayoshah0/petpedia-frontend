@@ -1,0 +1,107 @@
+
+<div class="conatiner">
+  <h2 class="" style="margin-bottom: 20px;"> 𓆝 𓆝 𓆟 FISH 𓆞 𓆝 𓆟</h2>
+  <div class="row">
+    <div class=" d-flex flex-wrap ">
+      <div *ngFor="let fish of pet;let i = index" class="col-sm-4 mb-4  " >
+        <div class="card" style="width: 400px">
+          <img [src]="fish.img_url" class="card-img-top mt-1 px-1 borderd" alt="{{ fish.name }} Image" style="height: 200px; object-fit: cover;">
+        
+          <div class="card-body">
+            <h5 class="card-title">{{ fish.name }}</h5>
+            <div *ngIf="factsVisibility[i]">
+            <p class="card-text">Type: {{ fish.petType }}</p>
+            
+             <ng-container *ngIf="fish.fact">
+              <label><h3>Fact:</h3></label>
+              <p *ngFor="let sentence of fish.fact.split('.'); let i = index">
+                {{ sentence }}{{ i < fish.fact.split('.').length - 1 ? '.' : '' }}
+              </p>
+              </ng-container>
+
+               <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    id="comment"
+                    [(ngModel)]="newCommentText"
+                    placeholder="Type your comment here...">
+                  </textarea>
+                </div>
+                <br>
+                <div class="heart-btn">
+                  <input class="checkbox" type="checkbox"/>
+                  <button class="style-btn mb-2"><span>Like</span></button>
+              
+                </div>
+              </div>
+              <button class="btn btn-dark mt-2" (click)="changevalue(i)">
+                {{ factsVisibility[i] ? 'Hide' : 'Show Fact' }}
+              </button>
+                
+                <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <body class="fish-body">
+
+  
+    <h2>Fish</h2>
+  
+    <div class="card">
+      <div class="card_body">
+        <div class="row">
+          <div class="col-sm-6">
+            <div *ngFor="let fish of Fishes" class="fish">
+              <div class="fish-card">
+                <div id="on">
+                  <img [src]="fish.img_url" alt="{{ fish.name }} Image" style="width: 300px; border-left-width: 50px;">
+                </div>
+                <br>
+                <h3>{{ fish.name }}</h3>
+                <br>
+                <h3>Type: {{ fish.petType }}</h3>
+                <br>
+                <ng-container *ngIf="fish.fact">
+                  <label><h3>Fact:</h3></label>
+                  <p *ngFor="let sentence of fish.fact.split('.'); let i = index">
+                    {{ sentence }}{{ i < fish.fact.split('.').length - 1 ? '.' : '' }}
+                  </p>
+                </ng-container>
+                <br>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    id="comment"
+                    [(ngModel)]="newCommentText"
+                    placeholder="Type your comment here...">
+                  </textarea>
+                </div>
+                <br>
+                <div class="heart-btn">
+                  <input class="checkbox" type="checkbox"/>
+                  <button class="style-btn"><span>Like</span></button>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        
+      </div>
+    </div>
+  
+
+  
+  
+  </body>
+
+   -->
+  
+   
+
+  

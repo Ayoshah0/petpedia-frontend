@@ -1,0 +1,29 @@
+
+.ppp{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+img {
+    margin-bottom: 10px; 
+}
+
+h1{
+    text-align: center;
+}
+
+ .bird{
+border-radius: 10px;
+
+
+}
+
+
+
+
+
+a{
+    text-decoration: none;
+    
+}

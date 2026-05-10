@@ -1,0 +1,48 @@
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .sin {
+    text-align: center;
+    
+  }
+  
+  .cat img {
+    
+    margin-bottom: 20px;
+  }
+  
+  form {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  p {
+    margin-top: 20px;
+  }
+  
+  

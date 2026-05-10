@@ -1,0 +1,14 @@
+
+<div class="navbar">
+
+    <div>
+       <a [routerLink]="['/home']" 
+          routerLinkActive="active-link" 
+         [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a [routerLink]="['/Fish']" routerLinkActive="active-link">Fish</a> 
+        <a [routerLink]="['/Bird']" routerLinkActive="active-link">Bird</a>
+        <a [routerLink]="['/Mammals']" routerLinkActive="active-link">Mammals</a>
+        <a [routerLink]="['/Pet']" routerLinkActive="active-link">pet mangement</a>
+        <a (click)="logout()" routerLinkActive="active-link">logout</a>
+    </div>
+</div>
