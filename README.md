@@ -1,27 +1,59 @@
-# FainalProjectFront
+# 🐾 Petpedia - Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
+A web application that shows facts about pets for those who are interested in animals or planning to get a pet.
 
-## Development server
+> ⚠️ This project requires the **Backend** to be running first on `http://localhost:8080`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🛠️ Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 16
+- TypeScript
+- Bootstrap
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## ⚙️ Setup & Installation
 
-## Running unit tests
+### Prerequisites
+- Node.js
+- Angular CLI
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm install -g @angular/cli
+```
 
-## Running end-to-end tests
+### Clone the repository
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+git clone https://github.com/Ayoshah0/petpedia-frontend.git
+cd petpedia-frontend/fainal_project_front
+```
 
-## Further help
+### Install dependencies
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+ng serve
+```
+
+Navigate to `http://localhost:4200/`
+
+---
+
+## 🔗 Related Repositories
+
+- Backend: [petpedia-backend](https://github.com/Ayoshah0/petpedia-backend)
+
+---
+
+## 🔗 Extra Links
+
+- 📋 Trello: [Project Board](https://trello.com/b/sgmvIK0x/finalproject)
+- 🎨 Presentation: [Google Slides](https://docs.google.com/presentation/d/19EOxQMfc7hffvllucJ66rjwg9eb3iPi58CkwqvLejC8/edit#slide=id.g99f2f57a71_0_170)
