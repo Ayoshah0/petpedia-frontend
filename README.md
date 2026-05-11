@@ -52,8 +52,3 @@ Navigate to `http://localhost:4200/`
 - Backend: [petpedia-backend](https://github.com/Ayoshah0/petpedia-backend)
 
 ---
-
-## 🔗 Extra Links
-
-- 📋 Trello: [Project Board](https://trello.com/b/sgmvIK0x/finalproject)
-- 🎨 Presentation: [Google Slides](https://docs.google.com/presentation/d/19EOxQMfc7hffvllucJ66rjwg9eb3iPi58CkwqvLejC8/edit#slide=id.g99f2f57a71_0_170)
